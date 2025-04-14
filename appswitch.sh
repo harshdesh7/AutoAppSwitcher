@@ -7,9 +7,9 @@
 #!/bin/bash
 
 # Default values
-stay_duration=10        # Time to stay on each app (in seconds)
-total_runtime=60        # Total runtime (in seconds)
-apps=( ) 
+stay_duration=30        # Time to stay on each app (in seconds)
+total_runtime=300        # Total runtime (in seconds)
+apps=("Slack" "Google Chrome") 
 
 # Help message
 show_help() {
@@ -69,4 +69,4 @@ while [[ "$switch_count" -lt "$switches" ]]; do
 done
 
 echo "App switcher finished after $switch_count switches."
-
+osascript -e 'tell application "Terminal" to activate'
